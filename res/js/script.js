@@ -18,15 +18,18 @@ var url = settings.url,
     images = document.querySelectorAll('#all .img');
 /* End local storage settings */
 /* Call functions */
-refreshSections();
-modalPos();
-window.onresize = function(){modalPos();};
-for(var i = 0; i < images.length; i++) document.querySelectorAll('#all .img')[i].onclick = function(){changeImg();};
-document.getElementById('refresh').onclick = function(){changeImg();};
-document.getElementById('settings').onclick = function(){modal();};
-document.getElementById('modal').addEventListener('click', function (e) {if(e.target === e.currentTarget) modal();});
-document.getElementById('exit').onclick = function(){navigator.app.exitApp();};
-changeImg();
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+  refreshSections();
+  modalPos();
+  window.onresize = function(){modalPos();};
+  for(var i = 0; i < images.length; i++) document.querySelectorAll('#all .img')[i].onclick = function(){changeImg();};
+  document.getElementById('refresh').onclick = function(){changeImg();};
+  document.getElementById('settings').onclick = function(){modal();};
+  document.getElementById('modal').addEventListener('click', function (e) {if(e.target === e.currentTarget) modal();});
+  document.getElementById('exit').onclick = function(){navigator.app.exitApp();};
+  changeImg();
+};
 /* End of calls */
 /* Functions */
 function changeImg() {
