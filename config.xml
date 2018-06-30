@@ -9,7 +9,7 @@
         <author href="https://vk.com/bimmy" email="bimmy25@mail.ru">David I. Baranovsky (b1mmy)</author>
         <content src="index.html" />
         <preference name="android-minSdkVersion" value="14" />
-        <preference name="phonegap-version" value="cli-6.3.0" />
+        <preference name="phonegap-version" value="cli-6.5.0" />
         <preference name="orientation" value="all" />
         <icon src="icon.png" />
         <splash src="splash.png" />
