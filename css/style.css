@@ -151,6 +151,10 @@ input, #slideshowpower {
   display: block;
   transition: opacity 0.5s ease;
 }
+#splashscreen {
+  opacity: 0.0;
+  transition: opacity 0.5s ease;
+}
 #splashscreen.active {
   opacity: 1.0;
   transition: opacity 0.5s ease;
