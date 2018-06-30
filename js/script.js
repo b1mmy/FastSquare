@@ -29,8 +29,12 @@ var url = settings.url,
 /* Start app */
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
+  document.getElementById('splashscreen').style.backgroundImage = 'splashes/' + (window.screen.availWidth > window.screen.availHeight ? 'landscape' : 'portrait') + '.png';
   navigator.splashscreen.hide();
-  checkInternet();
+  setTimeout(function(){
+    document.getElementById('splashscreen').style.display = 'none';
+    checkInternet();
+  },3000);
 };
 /* End of calls */
 /* Functions */

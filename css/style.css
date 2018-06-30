@@ -122,7 +122,7 @@ input, #slideshowpower {
 #buttons button:first-child {
   margin-left: 0;
 }
-#modal,#notconnected {
+#modal,#notconnected,#splashscreen {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -141,6 +141,13 @@ input, #slideshowpower {
   background: #000000;
   line-height: 100vh;
   overflow: hidden;
+  opacity: 1.0;
+}
+#splashscreen {
+  z-index: 9999;
+  background: url('') center center no-repeat;
+  background-size: cover;
+  display: block;
   opacity: 1.0;
 }
 #modal.active {
