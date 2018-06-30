@@ -1,0 +1,46 @@
+{
+  "name": "example",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "d5fabfa46384953ae055fceacb2229a7",
+      "css": "refresh",
+      "code": 59393,
+      "src": "elusive"
+    },
+    {
+      "uid": "c835a3a0692cca9dffde9a8a561da938",
+      "css": "off",
+      "code": 59394,
+      "src": "elusive"
+    },
+    {
+      "uid": "6083c8aa5e3345476a24a28ac1afaa61",
+      "css": "settings",
+      "code": 59392,
+      "src": "elusive"
+    },
+    {
+      "uid": "97bd5542ed3e143d2ee9b60e14487615",
+      "css": "add",
+      "code": 59395,
+      "src": "entypo"
+    },
+    {
+      "uid": "7b16b22168e762c88333f465da862098",
+      "css": "ok",
+      "code": 59396,
+      "src": "websymbols"
+    },
+    {
+      "uid": "499b745a2e2485bdd059c3a53d048e5f",
+      "css": "reset",
+      "code": 59397,
+      "src": "elusive"
+    }
+  ]
+}
