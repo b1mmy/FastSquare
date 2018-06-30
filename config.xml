@@ -9,6 +9,7 @@
         <author href="https://vk.com/bimmy" email="bimmy25@mail.ru">David I. Baranovsky (b1mmy)</author>
         <icon src="icon.png" />
         <splash src="splash.png" />
+        <preference name="SplashScreen" value="screen" />
         <preference name="permissions" value="none"/>
 
         <preference name="orientation"                value="both" />           <!-- all: default means both landscape and portrait are enabled -->
