@@ -132,5 +132,9 @@
         -->
 
         <access origin="*" />
-
+        <allow-intent href="http://*/*" />
+        <allow-intent href="https://*/*" />
+        <allow-navigation href="http://*/*" />
+        <allow-navigation href="https://*/*" />
+        <allow-navigation href="data:*" />
     </widget>
