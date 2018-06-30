@@ -19,6 +19,9 @@ html {
   background: #000000;
   transition: 0.0s;
 }
+body {
+  opacity: 0.0;
+}
 h1,h2,#slideshow span {
   padding: 10px;
 }
@@ -148,7 +151,11 @@ input, #slideshowpower {
   background: url('') center center no-repeat;
   background-size: cover;
   display: block;
+  transition: opacity 0.5s ease;
+}
+#splashscreen.active {
   opacity: 1.0;
+  transition: opacity 0.5s ease;
 }
 #modal.active {
   display: block;

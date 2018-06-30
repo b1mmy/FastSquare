@@ -29,11 +29,14 @@ var url = settings.url,
 /* Start app */
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-  document.getElementById('splashscreen').style.backgroundImage = 'url("splashes/' + (window.screen.availWidth > window.screen.availHeight ? 'landscape' : 'portrait') + '.png")';
   navigator.splashscreen.hide();
+  document.getElementById('splashscreen').style.backgroundImage = 'url("splashes/' + (window.screen.availWidth > window.screen.availHeight ? 'landscape' : 'portrait') + '.png")';
+  document.getElementById('splashscreen').classList.add('active');
+  checkInternet();
   setTimeout(function(){
-    document.getElementById('splashscreen').style.display = 'none';
-    checkInternet();
+    document.body.style.opacity = 1.0;
+    document.getElementById('splashscreen').classList.remove('active');
+    setTimeout(function(){document.getElementById('splashscreen').style.display = 'none';},500);
   },3000);
 };
 /* End of calls */
