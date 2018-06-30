@@ -10,12 +10,11 @@
         <content src="index.html" />
         <preference name="android-minSdkVersion" value="14" />
         <preference name="phonegap-version" value="cli-6.5.0" />
-        <preference name="orientation" value="all" />
         <icon src="icon.png" />
         <splash src="splash.png" />
         <preference name="permissions" value="none"/>
 
-        <preference name="orientation"                value="both" />           <!-- all: default means both landscape and portrait are enabled -->
+        <preference name="orientation"                value="all" />            <!-- all: default means both landscape and portrait are enabled -->
         <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
         <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
         <preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
@@ -33,7 +32,7 @@
         <plugin name="cordova-plugin-inappbrowser" source="npm" />
         <plugin name="cordova-plugin-splashscreen" source="npm">
           <preference name="SplashScreen"               value="screen" />
-          <preference name="AutoHideSplashScreen"       value="true" />
+          <preference name="AutoHideSplashScreen"       value="false" />
           <preference name="SplashScreenDelay"          value="5000" />
           <preference name="SplashMaintainAspectRatio"  value="true" />
           <preference name="FadeSplashScreen"           value="false"/>

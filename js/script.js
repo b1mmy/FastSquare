@@ -41,6 +41,7 @@ function checkInternet() {
     var elems = document.querySelectorAll('.connect');
     for(var i = 0; i < elems.length; i++) elems[i].remove();
     document.getElementById('notconnected').style.display = 'none';
+    navigator.splashscreen.hide();
     start();
   };
   img.onerror = function(){
