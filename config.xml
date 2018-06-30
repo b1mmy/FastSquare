@@ -9,12 +9,11 @@
         <author href="https://vk.com/bimmy" email="bimmy25@mail.ru">David I. Baranovsky (b1mmy)</author>
         <content src="index.html" />
         <preference name="android-minSdkVersion" value="14" />
-        <preference name="phonegap-version" value="cli-6.5.0" />
         <icon src="icon.png" />
         <splash src="splash.png" />
         <preference name="permissions" value="none"/>
 
-        <preference name="orientation"                value="portrait" />            <!-- all: default means both landscape and portrait are enabled -->
+        <preference name="orientation"                value="all" />            <!-- all: default means both landscape and portrait are enabled -->
         <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
         <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
         <preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
@@ -111,16 +110,12 @@
           <splash density="port-xxhdpi" src="res/screen/android/splash-port-xxhdpi.png" orientation="portrait"/>
           <splash density="port-xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png" orientation="portrait"/>
            <!--  Landscape  -->
-           <!--
-
-                  <splash density="land-ldpi" src="res/screen/android/splash-land-ldpi.png"/>
-                  <splash density="land-mdpi" src="res/screen/android/splash-land-mdpi.png"/>
-                  <splash density="land-hdpi" src="res/screen/android/splash-land-hdpi.png"/>
-                  <splash density="land-xhdpi" src="res/screen/android/splash-land-xhdpi.png"/>
-                  <splash density="land-xxhdpi" src="res/screen/android/splash-land-xxhdpi.png"/>
-                  <splash density="land-xxxhdpi" src="res/screen/android/splash-land-xxxhdpi.png"/>
-
-          -->
+                  <splash density="land-ldpi" src="res/screen/android/splash-land-ldpi.png" orientation="landscape"/>
+                  <splash density="land-mdpi" src="res/screen/android/splash-land-mdpi.png" orientation="landscape"/>
+                  <splash density="land-hdpi" src="res/screen/android/splash-land-hdpi.png" orientation="landscape"/>
+                  <splash density="land-xhdpi" src="res/screen/android/splash-land-xhdpi.png" orientation="landscape"/>
+                  <splash density="land-xxhdpi" src="res/screen/android/splash-land-xxhdpi.png" orientation="landscape"/>
+                  <splash density="land-xxxhdpi" src="res/screen/android/splash-land-xxxhdpi.png" orientation="landscape"/>
         </platform>
          <!--
 
@@ -142,5 +137,4 @@
         <access origin="*" />
         <allow-navigation href="*" />
         <allow-intent href="*" />
-        <engine name="android" spec="~6.0.0" />
     </widget>
