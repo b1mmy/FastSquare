@@ -25,10 +25,10 @@
     <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
-    <gap:plugin name="cordova-plugin-device" />
-    <gap:plugin name="cordova-plugin-inappbrowser" />
-    <gap:plugin name="cordova-plugin-splashscreen" />
-    <gap:plugin name="cordova-plugin-globalization" />
+    <gap:plugin name="cordova-plugin-device" source="npm" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+    <gap:plugin name="cordova-plugin-globalization" source="npm" />
 
     <icon src="res/icon.png" />
 
