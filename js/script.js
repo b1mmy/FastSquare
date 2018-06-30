@@ -34,7 +34,7 @@ function onDeviceReady() {
   document.getElementById('splashscreen').classList.add('active');
   checkInternet();
   setTimeout(function(){
-    document.body.style.opacity = 1.0;
+    document.querySelector('#all').style.opacity = 1.0;
     document.getElementById('splashscreen').classList.remove('active');
     setTimeout(function(){document.getElementById('splashscreen').style.display = 'none';},500);
   },3000);

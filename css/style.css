@@ -19,9 +19,6 @@ html {
   background: #000000;
   transition: 0.0s;
 }
-body {
-  opacity: 0.0;
-}
 h1,h2,#slideshow span {
   padding: 10px;
 }
@@ -34,6 +31,7 @@ h1,h2,#slideshow span {
   height: 100vh;
   margin: 0 auto;
   overflow: hidden;
+  opacity: 0.0;
 }
 .img {
   width: 100vw;
