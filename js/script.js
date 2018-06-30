@@ -29,7 +29,7 @@ var url = settings.url,
 /* Start app */
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-  document.getElementById('splashscreen').style.backgroundImage = 'splashes/' + (window.screen.availWidth > window.screen.availHeight ? 'landscape' : 'portrait') + '.png';
+  document.getElementById('splashscreen').style.backgroundImage = '/splashes/' + (window.screen.availWidth > window.screen.availHeight ? 'landscape' : 'portrait') + '.png';
   navigator.splashscreen.hide();
   setTimeout(function(){
     document.getElementById('splashscreen').style.display = 'none';
