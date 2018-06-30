@@ -29,6 +29,7 @@ var url = settings.url,
 /* Start app */
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
+  navigator.splashscreen.hide();
   checkInternet();
 };
 /* End of calls */
@@ -41,7 +42,6 @@ function checkInternet() {
     var elems = document.querySelectorAll('.connect');
     for(var i = 0; i < elems.length; i++) elems[i].remove();
     document.getElementById('notconnected').style.display = 'none';
-    navigator.splashscreen.hide();
     start();
   };
   img.onerror = function(){
