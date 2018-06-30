@@ -8,16 +8,29 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div id="notconnected">Not connected to the internet! Retry...</div>
   <div id="modal">
-    <div id="modal-body"></div>
+    <div id="modal-body">
+      <h1>Settings</h1>
+      <h2>Slideshow</h2>
+      <div id="slideshow">
+        <span>Duration (in seconds):</span>
+        <input id="timing" type="number" value="5" />
+        <span>Active:</span>
+        <select id="slideshowpower">
+          <option value="false">No</option>
+          <option value="true">Yes</option>
+        </select>
+      </div>
+      <h2>Categories</h2>
+      <div id="sections"></div>
+    </div>
   </div>
   <div id="all">
     <div class="img"></div>
     <div class="img active"></div>
     <button id="settings"><i class="icon icon-settings"></i></button>
     <select id="section"></select>
-    <button id="refresh"><i class="icon icon-refresh"></i></button>
-    <button id="exit"><i class="icon icon-off"></i></button>
   </div>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
