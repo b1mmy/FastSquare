@@ -27,10 +27,10 @@ var url = settings.url,
     mouse = 0;
 /* End local storage settings */
 /* Start app */
-//document.addEventListener("deviceready", onDeviceReady, false);
-//function onDeviceReady() {
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
   checkInternet();
-//};
+};
 /* End of calls */
 /* Functions */
 function checkInternet() {
