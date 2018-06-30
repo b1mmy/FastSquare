@@ -149,9 +149,6 @@ input, #slideshowpower {
   background: url('') center center no-repeat;
   background-size: cover;
   display: block;
-  transition: opacity 0.5s ease;
-}
-#splashscreen {
   opacity: 0.0;
   transition: opacity 0.5s ease;
 }
