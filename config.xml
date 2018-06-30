@@ -7,6 +7,8 @@
         <name>uScreen</name>
         <description>App for random screensaver images view</description>
         <author href="https://vk.com/bimmy" email="bimmy25@mail.ru">David I. Baranovsky (b1mmy)</author>
+        <icon src="icon.png" />
+        <splash src="splash.png" />
         <preference name="permissions" value="none"/>
 
         <preference name="orientation"                value="both" />           <!-- all: default means both landscape and portrait are enabled -->
@@ -30,8 +32,6 @@
         <gap:plugin name="cordova-plugin-globalization" source="npm" />
         <gap:plugin name="cordova-plugin-whitelist" source="npm" spec="1.1.0" />
 
-        <icon src="icon.png" />
-        <splash src="splash.png" />
         <platform name="ios">
           <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024"/>
           <icon src="res/icon/ios/icon-small.png" width="29" height="29"/>
