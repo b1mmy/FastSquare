@@ -6,7 +6,7 @@ var settings = {
   slideshow: 'false',
   timing: 10,
   duration: 1000,
-  hide: 2500
+  hide: 5000
 };
 /* End settings for app */
 /* Local storage settings */
