@@ -99,11 +99,8 @@ input, #slideshowpower {
   background: #f44236;
   border-color: #d22014;
 }
-#refresh, #exit {
-  bottom: 5px;
-}
 #section, #settings {
-  top: 5px;
+  bottom: 5px;
   opacity: 1.0;
   transition: opacity 0.5s ease;
 }
@@ -113,12 +110,6 @@ input, #slideshowpower {
 }
 #settings {
   right: 5px;
-}
-#refresh {
-  right: 5px;
-}
-#exit {
-  left: 5px;
 }
 #buttons button:first-child {
   margin-left: 0;
