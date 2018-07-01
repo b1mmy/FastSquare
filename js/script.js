@@ -27,44 +27,37 @@ var url = settings.url,
     m = 0;
 /* End local storage settings */
 /* Start app */
-/* Only for phonegap build
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-  navigator.splashscreen.hide();*/
   document.getElementById('splashscreen').style.backgroundImage = 'url("splashes/' + (window.screen.availWidth > window.screen.availHeight ? 'landscape' : 'portrait') + '.png")';
   setTimeout(function(){document.getElementById('splashscreen').classList.add('active');},500);
   checkInternet();
   setTimeout(function(){document.querySelector('#all').style.opacity = 1.0;},1000);
-  /* Only for web app */
   document.addEventListener("keydown", function(e) {
     if (e.keyCode == 13) {
       toggleFullScreen();
     }
   }, false);
-  function toggleFullScreen() {
-    if (!document.fullscreenElement &&    // alternative standard method
-        !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-      } else if (document.documentElement.mozRequestFullScreen) {
-        document.documentElement.mozRequestFullScreen();
-      } else if (document.documentElement.webkitRequestFullscreen) {
-        document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-      }
-    } else {
-      if (document.cancelFullScreen) {
-        document.cancelFullScreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if (document.webkitCancelFullScreen) {
-        document.webkitCancelFullScreen();
-      }
-    }
-  }
-  /* **************** */
-/* Only for phonegap build }; */
 /* End of calls */
 /* Functions */
+function toggleFullScreen() {
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
+  }
+}
 function checkInternet() {
   var img = document.body.appendChild(document.createElement("img"));
   img.classList.add('connect');
@@ -181,7 +174,6 @@ function refreshSections() {
   inputs += '<button id="plus"><i class="icon icon-add"></i></button>';
   inputs += '<button id="refreshSections"><i class="icon icon-ok"></i></button>';
   inputs += '<button id="reset"><i class="icon icon-reset"></i></button>';
-  inputs += '<button id="exit"><i class="icon icon-off"></i></button>';
   inputs += '</div>';
   document.getElementById('section').innerHTML = options;
   document.getElementById('sections').innerHTML = inputs;
@@ -191,7 +183,6 @@ function refreshSections() {
   document.getElementById('refreshSections').onclick = function(){addSections(true);};
   document.getElementById('reset').onclick = function(){reset();};
   document.getElementById('plus').onclick = function(){addSection();};
-  /* Only for phonegap build document.getElementById('exit').onclick = function(){navigator.app.exitApp();}; */
 }
 function addSection() {
   addSections(false);
