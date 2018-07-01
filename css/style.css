@@ -147,14 +147,17 @@ input, #slideshowpower {
 #splashscreen {
   z-index: 9999;
   background: url('') center center no-repeat;
-  background-size: cover;
+  background-size: 100%;
   display: block;
   opacity: 0.0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease,
+              background-size 0.5s ease;
 }
 #splashscreen.active {
   opacity: 1.0;
-  transition: opacity 0.5s ease;
+  background-size: 125%;
+  transition: opacity 0.5s ease,
+              background-size 0.5s ease;
 }
 #modal.active {
   display: block;

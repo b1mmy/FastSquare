@@ -24,18 +24,16 @@ var url = settings.url,
     images = document.querySelectorAll('#all .img'),
     slideshow = localStorage.getItem("slideshow"),
     timing = localStorage.getItem("timing"),
-    mouse = 0;
+    m = 0;
 /* End local storage settings */
 /* Start app */
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
   navigator.splashscreen.hide();
   document.getElementById('splashscreen').style.backgroundImage = 'url("splashes/' + (window.screen.availWidth > window.screen.availHeight ? 'landscape' : 'portrait') + '.png")';
-  document.getElementById('splashscreen').classList.add('active');
+  setTimeout(function(){document.getElementById('splashscreen').classList.add('active');},500);
   checkInternet();
-  setTimeout(function(){
-    document.querySelector('#all').style.opacity = 1.0;
-  },3000);
+  setTimeout(function(){document.querySelector('#all').style.opacity = 1.0;},1000);
 };
 /* End of calls */
 /* Functions */
@@ -62,7 +60,7 @@ function start() {
   window.onresize = function(){modalPos();};
   for(var i = 0; i < images.length; i++) {
     document.querySelectorAll('#all .img')[i].onclick = function(){
-      if(mouse*100 <= settings.hide) {
+      if(parseInt(this.getAttribute('data-m'),10)*100 <= settings.hide && this.getAttribute('data-slideshow') != 'true') {
         changeImg();
       } else {
         showelems();
@@ -86,20 +84,27 @@ function start() {
   changeImg();
   slideshowscroll(false);
   mousenomove();
-  document.getElementById('splashscreen').classList.remove('active');
-  setTimeout(function(){document.getElementById('splashscreen').style.display = 'none';},500);
+  setTimeout(function(){
+    document.getElementById('splashscreen').classList.remove('active');
+    setTimeout(function(){document.getElementById('splashscreen').style.display = 'none';},500);
+  },2000);
 }
 function showelems() {
-  mouse = 0;
+  window.m = 0;
   document.getElementById('settings').classList.remove('hide');
   document.getElementById('section').classList.remove('hide');
 }
 function mousenomove() {
-  if(mouse*100 <= settings.hide) {
-    mouse++;
+  if(window.m*100 <= settings.hide) {
+    window.m++;
   } else {
     document.getElementById('settings').classList.add('hide');
     document.getElementById('section').classList.add('hide');
+  }
+  var elems = document.querySelectorAll('#all .img');
+  for(var i = 0; i < elems.length; i++) {
+    elems[i].setAttribute('data-m',window.m);
+    elems[i].setAttribute('data-slideshow',window.slideshow);
   }
   setTimeout(function(){mousenomove();},100);
 }
