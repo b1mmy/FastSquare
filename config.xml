@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.uscreen.bimmy"
+        id          = "{YOUR_APP_ID}"
         versionCode = "1"
         version     = "1.0.0" >
-        <name>uScreen</name>
-        <description>App for random screensaver images view</description>
-        <author href="https://vk.com/bimmy" email="bimmy25@mail.ru">David I. Baranovsky (b1mmy)</author>
+        <name>{APP_NAME}</name>
+        <description>{APP_DESCRIPTION}</description>
+        <author href="{AUTHOR_LINK}" email="{AUTHOR_EMAIL}">{AUTHOR_NAME}</author>
         <content src="index.html" />
         <preference name="android-minSdkVersion" value="14" />
         <icon src="icon.png" />
